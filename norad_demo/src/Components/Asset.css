@@ -1,0 +1,19 @@
+div .topdiv {clear:both;
+    position:fixed;
+    left:0;
+    height:100%;
+    width:50%;
+    background-color:#990000;
+    color:#FFFFFF;
+    font-size:16px;
+    text-align:center;}
+div .bottomdiv {
+    clear:both;
+    position:fixed;
+    right:0;
+    height:100%;
+    width:50%;
+    background-color:#009900;
+    color:#FFFFFF;
+    font-size:16px;
+    text-align:center;}

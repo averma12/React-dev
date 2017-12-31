@@ -1,0 +1,4 @@
+.collapse .show {
+    transition: width 2s;
+    transition-timing-function: linear;
+}

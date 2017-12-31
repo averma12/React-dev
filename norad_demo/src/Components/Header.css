@@ -1,0 +1,22 @@
+nav ul{
+    list-style: none;
+    margin: 0 2px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+ 
+ nav .search-container {
+    float: right;
+  }
+  
+  nav input[type=text]{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  
+  
+ 
