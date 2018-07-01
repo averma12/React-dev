@@ -4,6 +4,19 @@ import { max } from 'd3-array';
 import { select } from 'd3-selection';
 
 class BarChart extends Component{
+
+    constructor(props){
+        this.state = {
+            
+        }
+    }
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+        log("getDerivedStateFromProps from Child");
+        log(nextProps);
+        log(prevState);
+        return null;
+   }
  
     componentDidMount() {
         this.createBarChart()
@@ -13,8 +26,10 @@ class BarChart extends Component{
      }
 
      createBarChart = () => {
-         
+
      }
 
 
 }
+
+export default BarChart;
