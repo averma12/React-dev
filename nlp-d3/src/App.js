@@ -7,13 +7,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+       <p class="first-paragraph">Here's my first paragraph.</p>
+       <p>Here are some reasons why d3 is cool:</p>
+       <ol>
+         <li>Makes data more engaging.</li>
+         <li>Has built-in math helpers.</li>
+         <li>Supports graph animations.</li>
+         <li>Makes drawing graph axes a breeze!</li>
+       </ol>
       </div>
     );
   }
