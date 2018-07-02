@@ -7,7 +7,7 @@ class BarChart extends Component{
 
     constructor(props){
         this.state = {
-            
+
         }
     }
 
@@ -27,6 +27,12 @@ class BarChart extends Component{
 
      createBarChart = () => {
 
+     }
+
+     render() {
+        return <svg ref={node => this.node = node}
+        width={500} height={500}>
+        </svg>
      }
 
 
