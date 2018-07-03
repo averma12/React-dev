@@ -6,15 +6,16 @@ import { select } from 'd3-selection';
 class BarChart extends Component{
 
     constructor(props){
+        super(props);
         this.state = {
-
+            
         }
     }
 
     static getDerivedStateFromProps(nextProps, prevState) {
-        log("getDerivedStateFromProps from Child");
-        log(nextProps);
-        log(prevState);
+        console.log("getDerivedStateFromProps from Child");
+        console.log(nextProps);
+        console.log(prevState);
         return null;
    }
  
@@ -25,7 +26,9 @@ class BarChart extends Component{
         this.createBarChart()
      }
 
-     createBarChart = () => {
+     createBarChart = (node) => {
+         console.log(node);
+         select(node);
 
      }
 
