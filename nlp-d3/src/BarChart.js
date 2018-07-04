@@ -27,9 +27,13 @@ class BarChart extends Component{
         this.createBarChart()
      }
 
-     createBarChart = (node) => {
-         console.log("Hello",node);
-         select(node);
+     createBarChart = () => {
+         console.log("Hello",this.node.current);
+         select(this.node.current)
+         .selectAll('rect')
+         .enter()
+         .append('rect');
+         console.log(this.props.data);
 
      }
 
