@@ -22,3 +22,13 @@ test('zero', () => {
     
     });
     
+    test('Test', () => {
+        mocked = jest.genMockFn();
+        mocked.mockImplementation(function () {
+          return "a";
+        });
+        mocked.mockImplementationOnce(function () {
+          return "b";
+       });
+       console.log(mocked(),mocked(),mocked());
+       });
