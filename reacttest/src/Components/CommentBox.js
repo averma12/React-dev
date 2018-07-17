@@ -6,8 +6,9 @@ class CommentBox extends Component {
     state = {
         text: "hello",
     };
-    
-    handleChange = (event) => {
+
+    handleChange = param => (event) => {
+        console.log(param);
         this.setState({ text: event.target.value });
     }
 
@@ -23,7 +24,7 @@ class CommentBox extends Component {
             <h4>
             Enter CommentBox
             </h4>
-           <textarea onChange={this.handleChange} value={this.state.text} />
+           <textarea  onChange={this.handleChange("Hello")} value={this.state.text} />
             
            <div>
                <button>
