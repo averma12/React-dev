@@ -6,7 +6,6 @@ export default (state = [], action) => {
          return [...state, action.payload];
         }
          default:
-        console.log("break");
         return [
         ...state,
         ];

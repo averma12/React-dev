@@ -4,10 +4,16 @@ import CommentBox from "Components/CommentBox";
 
 import { mount } from "enzyme";
 
+import Root from "../../Root";
+
 let wrapped;
 
 beforeEach(() => {
-    wrapped = mount(<CommentBox />);
+    wrapped = mount(
+    <Root>
+    <CommentBox />
+    </Root>
+    )
 });
 
 
@@ -22,8 +28,7 @@ it(" shows a comment box and a button ", () => {
 
 
 describe("the text area", () => {
-
-beforeEach( () => {
+beforeEach(() => {
     wrapped.find("textarea").simulate("change", {
         target: { value: "new comment" },
     });
@@ -31,12 +36,10 @@ beforeEach( () => {
 });
 
 it("has a text area that users can type in", () => {
-
 expect(wrapped.find("textarea").prop("value")).toEqual("new comment");
 });
 
 it("clear out text area when form is submitted", () => {
-
 wrapped.find("form").simulate("submit", {
    target: { value: "" },
 });
