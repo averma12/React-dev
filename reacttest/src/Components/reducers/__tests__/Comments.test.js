@@ -1,5 +1,5 @@
 import CommentsReducer from "../Comments";
-import { SAVE_COMMENT } from "../../actions/types";
+import { SAVE_COMMENT} from "../../actions/types";
 
 it( "describe the functionality of a reducer", () =>{
 const action = {

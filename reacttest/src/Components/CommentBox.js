@@ -20,6 +20,7 @@ class CommentBox extends Component {
 
     render() {
        return (
+           <div>
            <form onSubmit={this.handleSubmit}>
             <h4>
             Enter CommentBox
@@ -32,6 +33,10 @@ class CommentBox extends Component {
                </button>
             </div>
            </form>
+           </div>
+           <button onClick={this.props.fetchComments}>
+               Fetch Comments
+            </button>
        );
     }
 }
