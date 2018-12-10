@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import "./DynamicForm.css";
 
 class DynamicForm extends Component {
 constructor(props){
@@ -7,6 +8,12 @@ constructor(props){
 
     }
 }
+
+componentDidMount(){
+    console.log(this.props);
+}
+
+
 render(){
     return(
         <div>
