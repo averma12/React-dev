@@ -4,6 +4,7 @@ import "./DynamicForm.css";
 class DynamicForm extends Component {
 constructor(props){
     super(props);
+   // this.myRef = React.createRef();
     this.state = {
 
     }
@@ -21,6 +22,12 @@ onSubmit = (event) => {
 
 }
 
+onChange = (event,key) => {
+    console.log(this[key].value);
+    console.log("key",key);
+    this.setState({[key]:this[key].value});
+}
+
 renderForm = (event) => {
     let model = this.props.model;
     let form = model.map(m => {
@@ -35,7 +42,7 @@ renderForm = (event) => {
             htmlFor={key}>
             {m.label}
             </label>
-
+            <input {...props} className="form-input" type={type} key={`i-${key}`} ref={key => this[m.key]=key} onChange={(e) => this.onChange(e,key)}/>
             </div>
         );
     })

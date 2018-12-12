@@ -21,6 +21,7 @@ class App extends Component {
 
   onSubmit = (model) => {
     console.log("ye model hai",model);
+    console.log(JSON.stringify(model));
   }
   render() {
     return (
