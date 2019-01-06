@@ -34,7 +34,31 @@ renderForm = (event) => {
         let key = m.key;
         let type = m.type;
         let props = m.props || {};
-        
+        let name = m.name;
+        let target = key;
+        let value = this.state[target];
+        let input = <input {...props} className="form-input" type={type} key={`i-${key}`} ref={key => this[m.key]=key} onChange={(e) => this.onChange(e,key)}/>;
+        if(type === "radio"){
+            input = m.options.map((o) => {
+                let checked = o.value == value;
+                 return (
+                     <React.Fragment key={'fr' + o.key}>
+                         <input {...props}
+                                 className="form-input"
+                                 type={type}
+                                 key={o.key}
+                                 name={o.name}
+                                 checked={checked}
+                                 value={o.value}
+                                 onChange={(e)=>{this.onChange(e, o.name)}}
+                         />
+                         <label key={"ll" +o.key }>{o.label}</label>
+                     </React.Fragment>
+                 );
+            });
+            input = <div className ="form-group-radio">{input}</div>;
+        }
+
         return (
             <div key={key} className="form-group">
             <label className="form-label"
@@ -42,7 +66,7 @@ renderForm = (event) => {
             htmlFor={key}>
             {m.label}
             </label>
-            <input {...props} className="form-input" type={type} key={`i-${key}`} ref={key => this[m.key]=key} onChange={(e) => this.onChange(e,key)}/>
+            {input}
             </div>
         );
     })
