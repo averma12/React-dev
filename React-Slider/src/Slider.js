@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Slider.css"
 
 class RangeSlider extends Component {
   constructor(props) {
